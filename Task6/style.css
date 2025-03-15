@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0;
+}
+body{
+  background-color: white;
+  height: 90vh;
+}
+.container{
+    padding: 10px 20px;
+    background-color: aliceblue;
+    height: 85vh;
+    margin-top: 30px;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    margin-top: 50px;
+}
+h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-left: 30px;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+    font-size: 16px;
+    gap: 10px;
+}
+.menu a{
+    border-radius: 5px;
+    background-color: white;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: black;
+}
+.card{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.item1{
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px 10px;
+  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+ .item2{
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 10px;
+    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+   .item3{
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 10px;
+    gap: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+   }
+ .card-people{
+    display: flex;
+ }
+.card-people{
+    padding: 10px 3px;
+}
+
+.card-people-thumali img{
+   width: 100%;
+}
