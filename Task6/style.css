@@ -71,6 +71,12 @@ h1{
  .card-people{
     display: flex;
  }
+ svg{
+    margin-top: 15px;
+ }
+ p{
+    padding-top: 20px;
+ }
 .card-people{
     padding: 10px 3px;
 }
