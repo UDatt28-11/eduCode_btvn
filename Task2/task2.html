@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Menu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: whitesmoke;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: gray;
+        padding: 15px 40px;
+      }
+      .nav-links {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+      .nav-links li {
+        margin: 0 15px;
+        position: relative;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: black;
+      }
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        background: white;
+        padding: 10px;
+        min-width: 500px;
+      }
+      .dropdown-menu-nav{
+        display: flex;
+      }
+      .dropdown-menu-nav ul {
+        border-radius: 10px;
+        text-decoration: none;
+        list-style: none;
+      }
+      .top{
+       font-weight: bold;
+      }
+      .dropdown-menu-nav ul li a{
+        text-decoration: none;
+        list-style: none;
+      }
+      .dropdown-menu a {
+        display: block;
+        padding: 10px;
+        color: black;
+        text-decoration: none;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        background-color: white;
+        border-radius: 10px;
+      }
+      .auth-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .auth-buttons button {
+        padding: 10px 10px;
+        border: none;
+      }
+      .sign-up {
+        background: black;
+        color: white;
+        border-radius: 5px;
+      }
+      .log-in {
+        color: black;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">FRAMEWORK</a></li>
+        <li><a href="#">DEMOS</a></li>
+        <li class="dropdown">
+          <a href="#">RESOURCES</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-nav">
+                <ul>
+                    <li>
+                      <a href="#" class="top">TOP CONTROLS</a>
+                      <a href="#">Grid</a>
+                      <a href="#">Chart</a>
+                      <a href="#">Controls</a>
+                      <a href="#">Financial Chart</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="#" class="top">TOP CONTROLS</a>
+                      <a href="#">API</a>
+                      <a href="#">Blogs</a>
+                      <a href="#">Knowledge Base</a>
+                      <a href="#">Videos</a>
+                      <a href="#">Forums</a>
+                      <a href="#">Licensing</a>
+                    </li>
+                  </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">DOCUMENTATION</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="log-in">LOG IN</button>
+        <button class="sign-up">SIGN UP</button>
+      </div>
+    </nav>
+  </body>
+</html>
