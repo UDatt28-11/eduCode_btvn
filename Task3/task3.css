@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Tahoma;
+    background-color: #EEF2F9;
+    width: 1000px;
+    overflow: hidden;
+    height: 900px; 
+}
+.container{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 887px;
+    height: 661px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 24px 28px 9px rgba(179, 193, 217, 0.33);
+}
+.product{
+    display: flex;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 32px;
+    justify-content: space-between;
+}
+.image{
+    margin-right: 32px;
+}
+.category{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+h5{
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: #191847;
+    padding: 4px 8px;
+    width: 105px;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    gap: 10px;
+}
+h3{
+    font-size: 23px;
+    line-height: normal;
+}
+h6{
+    text-decoration: line-through;
+    font-size: 18px;
+    
+}
+h1{
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    padding: 7px 0px;
+    line-height: normal;
+    color: #191847;
+}
+p{
+    margin-top: 7px;
+    font-size: 14px;
+    font-style: normal;
+    opacity: 0,6;
+    color: rgb(134, 166, 194);
+}
+
+button{
+    border-radius: 8px;
+   border-style: none;
+    background: #4788E9;
+    gap: 10px;
+    box-shadow: 0px 7px 0px 0px #1C57EE;
+    color: white;
+    font-size: 18px;
+    padding: 17px;
+    align-items: center;
+    justify-content: center; 
+   width: 400px;
+}
+svg{
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
+}
+.add-cart{
+    border-radius: 8px;
+    border: 2px solid #C9C9DA;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 200px;
+    display: flex;
+
+}
+.add-wishlist{
+    display: flex;
+    border-radius: 8px;
+    border: 2px solid #C9C9DA;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button{
+}
