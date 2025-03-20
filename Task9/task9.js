@@ -6,4 +6,4 @@ function swapNumber(a, b) {
     return [a,b];
   }
   
- console.log(swapNumber(3,5))
+ console.log(swapNumber(5,3))
