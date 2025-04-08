@@ -1,3 +1,4 @@
+// Input:
 const fruits = [
   "apple",
   "banana",
@@ -10,8 +11,16 @@ const fruits = [
 ];
 
 function removeDuplicate(arr) {
-  return arr.filter((item, index) => arr.indexOf(item) === index);
+  const result = [];
+  for (i = 0; i < arr.length; i++) {
+    if (!result.includes(arr[i])) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
 }
 
+// Output:
 const result = removeDuplicate(fruits);
-console.log(result);
+
+console.log(result); // ["apple", "banana", "kiwi", "orange"]
