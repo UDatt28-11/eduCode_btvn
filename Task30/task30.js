@@ -1,4 +1,3 @@
-//Input
 const orders = [
   { id: 1, amount: 100, date: "2025-04-01", status: "completed" },
   { id: 2, amount: 200, date: "2025-04-02", status: "pending" },
@@ -11,12 +10,16 @@ const orders = [
   { id: 9, amount: 350, date: "2025-04-09", status: "completed" },
   { id: 10, amount: 500, date: "2025-04-10", status: "completed" },
 ];
-function calculateTotalCompletedAmount(array, amount) {
-  // Tính toán và in ra kết quả
+function calculateTotalAmount(array, amount) {
+  const result = array.reduce((acc, cur) => {
+    if (cur.amount > amount && cur.status === "completed") {
+      acc += cur.amount;
+      cur.status = "completed";
+    }
+    return acc;
+  }, 0);
+  console.log(result);
 }
-// Output
-const result = calculateTotalCompletedAmount(orders, 150);
-console.log(result); // 850
-
-const result2 = calculateTotalCompletedAmount(orders, 100);
-console.log(result2); // 1120
+calculateTotalAmount(orders, 100);
+calculateTotalAmount(orders, 150);
+console.log(orders);
