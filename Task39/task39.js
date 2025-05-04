@@ -18,6 +18,7 @@ function getDataPromise(callbackPromise) {
     setTimeout(() => {
       const callbackPromise = [1, 2, 3, 4];
       resolve(callbackPromise);
+      reject(callbackPromise);
     }, 1000);
   });
 }
