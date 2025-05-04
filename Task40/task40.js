@@ -66,5 +66,4 @@ function getProductDetailsPromise(productId, productName, productPrice) {
 
 getUserPromise(1).then((user) => console.log(user));
 getPurchasesPromise(1).then((user) => console.log(user));
-getProductDetailsPromise(1).then((user) => console.log(user));
-// Sử dụng
+
