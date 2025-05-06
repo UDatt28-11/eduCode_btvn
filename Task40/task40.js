@@ -19,33 +19,32 @@ function getProductDetails(productId, productName, productPrice, callback) {
   }, 1000);
 }
 
-getUser(1, (data) => {
-  console.log(data);
-  getPurchases(data.id, (purschases) => {
-    console.log(purschases);
-    let total = 0;
-    purschases.forEach((element) => {
-      getProductDetails(element.id, element.product, element.price, (data) => {
-        console.log(data);
-        total += element.price;
-        if (element.id === purschases[purschases.length - 1].id) {
-          console.log("tong tien: " + total);
-          // console.log("Promise");
-        }
-      });
-    });
-  });
-});
+//Cách 1 call back
+// getUser(1, (user) => {
+//   console.log(user);
+//   getPurchases(user.userId, (purchase) => {
+//     console.log(purchase);
+//     let total = 0;
+//     let count = 0;
+//     purchase.forEach((product) => {
+//       getProductDetails(product.id, product.name, product.price, () => {
+//         total += product.price;
+//         count++;
+//         if (count == purchase.length) {
+//           console.log(total);
+//         }
+//       });
+//     });
+//   });
+// });
 
-function getUserPromise(userId) {
+//Cách 2 : Promise
+function getUser(userId) {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve({ id: userId, name: "John", age: 30 });
-    }, 1000);
+    resolve({ id: userId, name: "John", age: 30 });
   });
 }
-
-function getPurchasesPromise(userId) {
+function getPurchases(userId) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([
@@ -55,15 +54,53 @@ function getPurchasesPromise(userId) {
     }, 1000);
   });
 }
-
-function getProductDetailsPromise(productId, productName, productPrice) {
+function getProductDetails(product) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve({ id: productId, name: productName, price: productPrice });
+      resolve({ id: product, name: product.product, price: product.price });
     }, 1000);
   });
 }
-
-getUserPromise(1).then((user) => console.log(user));
-getPurchasesPromise(1).then((user) => console.log(user));
-
+// getUser(1)
+//   .then((user) => {
+//     console.log(user);
+//     return getPurchases(user.id);
+//   })
+//   .then((purchase) => {
+//     console.log(purchase);
+//     let total = 0;
+//     let count = 0;
+//     purchase.forEach((product) => {
+//       getProductDetails(product).then((data) => {
+//         total += product.price;
+//         count++;
+//         if (count == purchase.length) {
+//           console.log(total);
+//         }
+//       });
+//     });
+//   });
+async function main() {
+  try {
+    const user = await getUser(1);
+    const purchases = await getPurchases(user.id);
+    let sum = 0;
+    let count = 0;
+    purchases.forEach(async (product) => {
+      try {
+        const productDetails = await getProductDetails(product);
+        console.log(productDetails);
+        sum += product.price;
+        count++;
+        if (count === purchases.length) {
+          console.log(sum);
+        }
+      } catch (error) {
+        console.log("ow day", error);
+      }
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+main();
