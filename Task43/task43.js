@@ -91,6 +91,7 @@ previewEle.addEventListener("click", () => {
   if (page > 1) {
     page--;
     fetchProducts();
+    updateCurrentPage();
   }
 });
 
@@ -99,7 +100,13 @@ nextEle.addEventListener("click", () => {
   if (page < totalPages) {
     page++;
     fetchProducts();
+    updateCurrentPage();
   }
 });
+const currentPageEle = document.getElementById("current-page");
+
+function updateCurrentPage() {
+  currentPageEle.textContent = page;
+}
 
 fetchProducts();
