@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 43</title>
+    <style>
+      /* task43.css */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      #products {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .product-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      .paginate {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .paginate button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .paginate button:hover {
+        background-color: #0056b3;
+      }
+
+      #current-page {
+        background-color: #6c757d;
+        cursor: default;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Danh Sách sản phẩm</h1>
+    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm" />
+    <button id="searchBtn">Tìm kiếm</button>
+    <select id="sortOrder">
+      <option value="">Sắp xếp theo giá</option>
+      <option value="asc">Giá tăng dần</option>
+      <option value="desc">Giá giảm dần</option>
+    </select>
+    <div id="products"></div>
+    <div class="paginate">
+      <button id="preview">Preview</button>
+      <button id="current-page">1</button>
+      <button id="next">Next</button>
+    </div>
+
+    <script src="task43.js"></script>
+  </body>
+</html>
